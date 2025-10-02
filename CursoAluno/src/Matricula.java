@@ -1,4 +1,5 @@
 public class Matricula {
 
-    private boolean situacao;
+    private Registro registro;
+    
 }
