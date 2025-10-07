@@ -10,11 +10,4 @@ public class Curso {
         this.nome = nome;
     }
 
-    public void addAluno(Aluno aluno) {
-        alunos.add(aluno);
-    }
-
-    public String toString() {
-
-    }
 }

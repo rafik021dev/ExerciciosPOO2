@@ -1,5 +1,6 @@
-public enum situacao {
+public enum Situacao {
     APROVADO,
     REPROVADO,
     REPROVADO_FALTA;
 }
+

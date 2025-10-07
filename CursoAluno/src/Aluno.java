@@ -14,6 +14,9 @@ public class Aluno {
     public Curso getCurso() {
         return curso;
     }
+    public String getNome() {
+        return nome;
+    }
 
     public String toString() {
         return "Aluno:" + nome + "(Matrícula:" + matricula + ")";
