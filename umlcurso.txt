@@ -1,0 +1,49 @@
+@startuml
+class Aluno {
+  - nome : String
+  - matricula : String
+  + getCurso() : Curso
+}
+
+class Curso {
+  - nome : String
+}
+
+class Fase {
+  - numero : int
+}
+
+class Disciplina {
+  - codigo : String
+  - nome : String
+  - ofertada : boolean
+}
+
+class Professor {
+  - nome : String
+}
+
+class Matricula {
+  - situacao : Situacao
+}
+
+' curvello, acho q vc ainda nao ensinou isso, mas onde eu trabalho é bem comum usarmos enum em php
+enum Situacao {
+  APROVADO
+  REPROVADO
+  REPROVADO_FALTA
+}
+
+class Registro {
+  - data : Date
+  - tipo : String
+}
+
+Curso "1" *-- "1..*" Aluno
+Disciplina "1" -- "1..4" Professor
+Aluno "*" -- "*" Disciplina : Matricula
+Matricula "1" -- "1" Situacao
+
+Matricula "1" o-- "*" Registro
+Registro "1" --> "1" Professor
+@enduml
